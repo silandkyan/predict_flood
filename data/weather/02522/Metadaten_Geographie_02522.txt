@@ -1,0 +1,4 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  2522;  114.00; 49.0234;  8.3841;19460501;19660930;Karlsruhe
+  2522;  114.00; 49.0234;  8.3841;19661001;19771130;Karlsruhe
+  2522;  111.60; 49.0382;  8.3641;19771201;20081101;Karlsruhe

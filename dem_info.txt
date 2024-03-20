@@ -1,0 +1,7 @@
+for downloading copernicus 30m DEM: https://sentinels.copernicus.eu/web/sentinel/-/copernicus-dem-new-direct-data-download-access
+
+direct download link looks like this:
+
+https://prism-dem-open.copernicus.eu/pd-desk-open-access/prismDownload/COP-DEM_GLO-30-DGED__2022_1/Copernicus_DSM_10_N29_00_E014_00.tar
+
+replace Nyy and Exxx with grid coordinates; for Upper Rhein Graben region: N50-N47; E007-E008 (eight tiles)

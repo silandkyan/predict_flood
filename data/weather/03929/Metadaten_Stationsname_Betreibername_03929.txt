@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  3929;Philippsburg;19471217;19850930
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  3929;DWD;19471217;19850930
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

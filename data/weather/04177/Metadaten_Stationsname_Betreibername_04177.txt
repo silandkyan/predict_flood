@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  4177;Forchheim;19230501;19741231
+  4177;Rheinstetten-Forchheim;19750101;19850630
+  4177;Rheinstetten;20081028;
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  4177;Wetterdienst;19230501;19521110
+  4177;DWD;19521111;19850630
+  4177;DWD;20081028;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

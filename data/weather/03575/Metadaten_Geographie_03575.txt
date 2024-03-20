@@ -1,0 +1,4 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  3575;  146.00; 49.3517;  8.1391;19490616;19520930;Neustadt/Weinstraße
+  3575;  140.00; 49.3553;  8.1435;19521001;19570930;Neustadt/Weinstraße
+  3575;  163.00; 49.3570;  8.1405;19571001;19830110;Neustadt/Weinstraße

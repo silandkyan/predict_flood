@@ -1,0 +1,15 @@
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Gesamt_Fehlwerte;Beschreibung;eor;                                                                                                              
+3929;Philippsburg;TGK;01.01.1948;30.09.1985;90;Gesamt_Messzeitraum;eor;                                                                                                                                 
+3929;Philippsburg;UPM;01.01.1948;30.09.1985;31;Gesamt_Messzeitraum;eor;                                                                                                                                 
+3929;Philippsburg;VPM;01.01.1948;30.09.1985;31;Gesamt_Messzeitraum;eor;                                                                                                                                 
+3929;Philippsburg;SHK_TAG;01.01.1948;30.09.1985;67;Gesamt_Messzeitraum;eor;                                                                                                                             
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Anzahl_Fehlwerte;Beschreibung;eor;                                                                                                              
+3929;Philippsburg;TGK;01.01.1969;28.02.1969;59;;eor;                                                                                                                                                    
+3929;Philippsburg;TGK;01.01.1973;31.01.1973;31;;eor;                                                                                                                                                    
+3929;Philippsburg;UPM;01.01.1971;31.01.1971;31;;eor;                                                                                                                                                    
+3929;Philippsburg;VPM;01.01.1971;31.01.1971;31;;eor;                                                                                                                                                    
+3929;Philippsburg;SHK_TAG;23.01.1948;23.02.1948;32;;eor;                                                                                                                                                
+3929;Philippsburg;SHK_TAG;25.02.1948;27.02.1948;3;;eor;                                                                                                                                                 
+3929;Philippsburg;SHK_TAG;29.02.1948;29.02.1948;1;;eor;                                                                                                                                                 
+3929;Philippsburg;SHK_TAG;01.01.1973;31.01.1973;31;;eor;                                                                                                                                                
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --                                                                                                                                                    

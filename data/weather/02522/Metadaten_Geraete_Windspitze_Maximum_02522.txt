@@ -1,0 +1,7 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+2522;Karlsruhe;;;;;19510101;19710831;Gerätetyp unbekannt;Windmessung, elektromechanisch;eor;
+2522;Karlsruhe;8.38;49.02;114;17.2;19710901;19771130;Universal-Windschreiber 90;Windmessung, elektromechanisch;eor;
+2522;Karlsruhe;8.36;49.04;111.6;10;19771201;19860301;Universal-Windschreiber 90;Windmessung, elektromechanisch;eor;
+2522;Karlsruhe;8.36;49.04;111.6;15;19860302;19950830;Universal-Windschreiber 90;Windmessung, elektromechanisch;eor;
+2522;Karlsruhe;8.36;49.04;111.6;47.7;19950831;20081101;Windsensor Classic 4.3303;Windmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

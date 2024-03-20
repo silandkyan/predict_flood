@@ -1,0 +1,4 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  3929;   98.00; 49.2328;  8.4551;19471217;19730628;Philippsburg
+  3929;   98.00; 49.2389;  8.4532;19730629;19840402;Philippsburg
+  3929;  100.00; 49.2511;  8.4415;19840403;19850930;Philippsburg

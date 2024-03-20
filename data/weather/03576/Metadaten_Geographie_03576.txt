@@ -1,0 +1,2 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  3576;  125.00; 49.3478;  8.1822;19751201;20021231;Neustadt/Weinstraﬂe (Heidehof)

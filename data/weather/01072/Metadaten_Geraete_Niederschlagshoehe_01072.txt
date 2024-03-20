@@ -1,0 +1,11 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+1072;Dürkheim, Bad;8.17;49.47;130;1;19520101;19751231;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.22;49.48;104;1;19760101;19770430;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.18;49.47;113;1;19770501;19770716;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.18;49.45;150;1;19770717;19770831;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.15;49.46;225;1;19771101;19870930;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.16;49.46;138;1;19880501;19970831;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;1;19981201;20040531;Hellmann;Niederschlagsmenge, konv.;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;1;20040601;20200617;PLUVIO;Niederschlagsmenge, elektr.;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;1;20200618;20230426;rain[e]H3, Wägetechnologie;Niederschlagsmenge, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

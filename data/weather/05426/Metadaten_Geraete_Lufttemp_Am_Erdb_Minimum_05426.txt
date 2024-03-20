@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+5426;Weinbiet;8.12;49.38;553;.05;19530101;19630331;Minimumthermometer;Temperaturmessung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;.05;19630401;19741231;Minimumthermometer;Temperaturmessung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;.05;19750901;19761031;Minimumthermometer;Temperaturmessung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;.05;19761101;20081001;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.7;.05;19830111;19931027;Minimumthermometer;Temperaturmessung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.5;.05;20081002;20090702;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;.05;20090706;20220810;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;.05;20220818;20230426;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

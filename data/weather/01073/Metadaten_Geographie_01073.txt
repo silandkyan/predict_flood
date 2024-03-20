@@ -1,0 +1,2 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  1073;  115.00; 49.4686;  8.1797;18810101;19531231;Dürkheim, Bad (Saline)

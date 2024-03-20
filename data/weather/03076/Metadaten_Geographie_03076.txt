@@ -1,0 +1,3 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  3076;   95.00; 49.4606;  8.4246;18940701;19510430;Ludwigshafen-Mundenheim
+  3076;   95.00; 49.4606;  8.4246;19510501;19570731;Ludwigshafen-Mundenheim

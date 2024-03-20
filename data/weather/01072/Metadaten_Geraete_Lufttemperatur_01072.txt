@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+1072;Dürkheim, Bad;8.17;49.47;130;2;19520101;19751231;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.22;49.48;104;2;19760101;19770430;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.18;49.47;113;2;19770501;19770716;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.18;49.45;150;2;19770717;19770831;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.15;49.46;225;2;19771101;19870930;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.16;49.46;138;2;19880501;19970831;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;2;19981201;20040531;Psychrometerthermometer (trocken);Temperatur/Feuchtemessung, konv.;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;2;20040601;20230426;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

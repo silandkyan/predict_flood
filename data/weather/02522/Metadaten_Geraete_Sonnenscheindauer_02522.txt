@@ -1,0 +1,7 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+2522;Karlsruhe;;;;;19360101;19460430;Gerätetyp unbekannt;Sonnenscheinregistrierung, konv.;eor;
+2522;Karlsruhe;8.38;49.02;114;13.5;19460501;19771130;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+2522;Karlsruhe;8.36;49.04;111.6;35.5;19780101;19781130;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+2522;Karlsruhe;8.36;49.04;111.6;33.8;19781201;19960724;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+2522;Karlsruhe;8.36;49.04;111.6;33.8;19960801;20081101;SONIe Sonnenenergie-Sensor;Sonnenscheindauer, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --
