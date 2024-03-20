@@ -1,0 +1,9 @@
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Gesamt_Fehlwerte;Beschreibung;eor;                                                                                                              
+3007;Limburgerhof;SDK;01.01.1947;31.12.1955;61;Gesamt_Messzeitraum;eor;                                                                                                                                 
+3007;Limburgerhof;SHK_TAG;01.01.1947;31.12.1955;141;Gesamt_Messzeitraum;eor;                                                                                                                            
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Anzahl_Fehlwerte;Beschreibung;eor;                                                                                                              
+3007;Limburgerhof;SDK;01.04.1949;31.05.1949;61;;eor;                                                                                                                                                    
+3007;Limburgerhof;SHK_TAG;08.02.1947;08.02.1947;1;;eor;                                                                                                                                                 
+3007;Limburgerhof;SHK_TAG;10.02.1947;28.02.1947;19;;eor;                                                                                                                                                
+3007;Limburgerhof;SHK_TAG;02.03.1947;30.06.1947;121;;eor;                                                                                                                                               
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --                                                                                                                                                    

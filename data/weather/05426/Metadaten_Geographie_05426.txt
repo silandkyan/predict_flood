@@ -1,0 +1,4 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  5426;  553.00; 49.3765;  8.1214;19510101;19630331;Weinbiet
+  5426;  552.70; 49.3758;  8.1212;19630401;20081001;Weinbiet
+  5426;  552.50; 49.3758;  8.1212;20081002;        ;Weinbiet

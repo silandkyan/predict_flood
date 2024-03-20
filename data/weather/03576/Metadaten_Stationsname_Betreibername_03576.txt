@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  3576;Neustadt/Weinstraße (Heidehof);19751201;20021231
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  3576;DWD;19751201;20021231
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

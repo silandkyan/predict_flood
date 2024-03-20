@@ -1,0 +1,4 @@
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Anzahl_Fehlwerte;Beschreibung;eor;                                                                                                              
+3575;Neustadt/Weinstraﬂe;FM;01.02.1971;02.02.1971;2;;eor;                                                                                                                                               
+3575;Neustadt/Weinstraﬂe;FM;04.02.1971;26.02.1971;23;;eor;                                                                                                                                              
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --                                                                                                                                                    

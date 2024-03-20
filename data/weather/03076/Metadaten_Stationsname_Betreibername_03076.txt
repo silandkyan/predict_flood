@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  3076;Ludwigshafen-Mundenheim;18940701;19570731
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  3076;DWD;18940701;19570731
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

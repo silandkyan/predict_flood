@@ -1,0 +1,3 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+3576;Neustadt/Weinstraﬂe (Heidehof);8.18;49.35;125;1;19760101;20021231;Hellmann;Niederschlagsmenge, konv.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  2522;Karlsruhe;19460501;20081101
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  2522;DWD;19460501;20081101
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

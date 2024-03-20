@@ -1,0 +1,4 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Barometerhoehe ueber NN [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+3076;Ludwigshafen-Mundenheim;;;;;19470101;19510430;Gerätetyp unbekannt;Luftdruckmessung, konv.;eor;
+3076;Ludwigshafen-Mundenheim;8.42;49.46;95;101.4;19510501;19570731;Stationsbarometer;Luftdruckmessung, konv.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

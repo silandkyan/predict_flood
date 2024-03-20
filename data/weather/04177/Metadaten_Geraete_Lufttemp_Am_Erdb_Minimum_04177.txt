@@ -1,0 +1,5 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+4177;Forchheim;8.33;48.97;116;.05;19480101;19741231;Minimumthermometer;Temperaturmessung, konv.;eor;
+4177;Rheinstetten-Forchheim;8.33;48.97;116;.05;19750101;19850630;Minimumthermometer;Temperaturmessung, konv.;eor;
+4177;Rheinstetten;8.33;48.97;116.1;.05;20081101;20230426;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

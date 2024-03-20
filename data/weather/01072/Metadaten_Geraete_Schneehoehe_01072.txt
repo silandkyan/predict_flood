@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+1072;Dürkheim, Bad;8.17;49.47;130;;19520101;19751231;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.22;49.48;104;;19760101;19770430;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.18;49.47;113;;19770501;19770716;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.18;49.45;150;;19770717;19771031;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.15;49.46;225;;19771101;19880430;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.16;49.46;138;;19880501;19970831;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;;19981201;20040531;Schneepegel;Schneehöhenmessung, manuell;eor;
+1072;Dürkheim, Bad;8.19;49.47;107;;20040601;20230426;Schneepegel;Schneehöhenmessung, manuell;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

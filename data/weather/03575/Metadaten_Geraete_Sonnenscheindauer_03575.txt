@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+3575;Neustadt/Weinstraﬂe;;;;;19510101;19540531;Ger‰tetyp unbekannt;Sonnenscheinregistrierung, konv.;eor;
+3575;Neustadt/Weinstraﬂe;8.14;49.36;140;2.5;19540601;19570930;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+3575;Neustadt/Weinstraﬂe;8.14;49.36;163;2.7;19571001;19601231;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+3575;Neustadt/Weinstraﬂe;8.14;49.36;163;19;19610101;19830110;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

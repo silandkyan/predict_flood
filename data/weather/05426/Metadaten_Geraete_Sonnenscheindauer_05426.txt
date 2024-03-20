@@ -1,0 +1,11 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+5426;Weinbiet;8.12;49.38;553;23;19530401;19630331;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;23;19630401;19741231;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;23;19750901;19761031;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;23;19830111;19930930;Sonnenscheinschreiber nach Campbell-Stokes;Sonnenscheinregistrierung, konv.;eor;
+5426;Weinbiet;8.12;49.38;552.7;24.2;19931001;20081001;SONIe Sonnenenergie-Sensor;Sonnenscheindauer, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;24.2;20081002;20090511;SONIe Sonnenenergie-Sensor;Sonnenscheindauer, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;24.2;20090512;20090702;SCAPP;Sonnenscheind/Strahlungsmessung, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;24.2;20090706;20100731;SCAPP;Sonnenscheind/Strahlungsmessung, elektr.;eor;
+5426;Weinbiet;8.12;49.38;552.5;24.2;20100804;20230426;SCAPP;Sonnenscheind/Strahlungsmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

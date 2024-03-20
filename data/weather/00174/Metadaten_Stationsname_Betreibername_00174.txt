@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+   174;Annweiler-Bindersbach;19820201;19871231
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+   174;DWD;19820201;19871231
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

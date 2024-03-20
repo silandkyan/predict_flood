@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+2522;Karlsruhe;;;;;19440101;19461231;Gerätetyp unbekannt;Temperaturmessung, konv.;eor;
+2522;Karlsruhe;8.38;49.02;114;.05;19470101;19771130;Minimumthermometer;Temperaturmessung, konv.;eor;
+2522;Karlsruhe;8.36;49.04;111.6;.05;19771201;19960724;Minimumthermometer;Temperaturmessung, konv.;eor;
+2522;Karlsruhe;8.36;49.04;111.6;.05;19960725;20081101;PT 100 (Luft);Temperaturmessung, elektr.;eor;
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

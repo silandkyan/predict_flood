@@ -1,0 +1,24 @@
+Stations_ID;Stations_Name;Parameter;Von_Datum;Bis_Datum;Anzahl_Fehlwerte;Beschreibung;eor;                                                                                                              
+1073;Dürkheim, Bad (Saline);TMK;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);TXK;01.01.1939;12.02.1947;2965;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);TXK;14.02.1947;14.02.1947;1;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TXK;17.02.1947;18.02.1947;2;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TXK;20.02.1947;28.02.1947;9;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TNK;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);TNK;13.02.1947;13.02.1947;1;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TNK;15.02.1947;16.02.1947;2;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TNK;19.02.1947;19.02.1947;1;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);TNK;03.05.1949;30.06.1949;59;;eor;                                                                                                                                          
+1073;Dürkheim, Bad (Saline);UPM;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);VPM;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);VPM;13.12.1952;13.12.1952;1;;eor;                                                                                                                                           
+1073;Dürkheim, Bad (Saline);NM;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                         
+1073;Dürkheim, Bad (Saline);RSK;31.12.1938;31.01.1947;2954;;eor;                                                                                                                                        
+1073;Dürkheim, Bad (Saline);RSKF;31.12.1938;31.01.1947;2954;;eor;                                                                                                                                       
+1073;Dürkheim, Bad (Saline);SHK_TAG;19.01.1936;09.02.1936;22;;eor;                                                                                                                                      
+1073;Dürkheim, Bad (Saline);SHK_TAG;13.02.1936;30.09.1936;231;;eor;                                                                                                                                     
+1073;Dürkheim, Bad (Saline);SHK_TAG;01.11.1936;30.11.1936;30;;eor;                                                                                                                                      
+1073;Dürkheim, Bad (Saline);SHK_TAG;01.01.1939;31.01.1947;2953;;eor;                                                                                                                                    
+1073;Dürkheim, Bad (Saline);SHK_TAG;06.01.1951;28.02.1951;54;;eor;                                                                                                                                      
+1073;Dürkheim, Bad (Saline);SHK_TAG;01.10.1951;31.10.1951;31;;eor;                                                                                                                                      
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --                                                                                                                                                    

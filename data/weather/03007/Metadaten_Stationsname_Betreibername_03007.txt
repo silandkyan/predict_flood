@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  3007;Limburgerhof;19460101;19560131
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  3007;DWD;19460101;19560131
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --

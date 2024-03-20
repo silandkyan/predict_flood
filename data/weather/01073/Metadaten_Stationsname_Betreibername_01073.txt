@@ -1,0 +1,6 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  1073;Dürkheim, Bad (Saline);18810101;19531231
+
+Stations_ID;Betreibername;Von_Datum;Bis_Datum
+  1073;DWD;18810101;19531231
+generiert: 08.05.2023 --  Deutscher Wetterdienst  --
