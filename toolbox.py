@@ -9,6 +9,12 @@ import cartopy.crs as ccrs # probably needs to be installed with pip...
 import pyproj
 from shapely.geometry import Point
 
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_percentage_error
+from sklearn.metrics import r2_score
+from sklearn.metrics import accuracy_score
+
 
 def load_dem(file):
     with rasterio.open(file) as src:
@@ -119,4 +125,36 @@ def calc_initial_station_data(stations, data, initial_n_years):
                                     geometry='geometry')
 
     return stations_agg
+
+
+def merge_groundwater_data(data, stations):
+    merged = pd.merge(data, stations, how='left')
+    merged['water_depth_anomaly'] = merged['water_depth'] - merged['ini_1_years_water_depth_mean']
+    merged.index = merged['date']
+
+    return merged
+
+
+def calc_metrics(y_true, y_pred):
+    mae = mean_absolute_error(y_true = y_true,
+                              y_pred = y_pred)
+    
+    rmse = mean_squared_error(y_true = y_true,
+                              y_pred = y_pred,
+                              squared=False)
+
+    mape = mean_absolute_percentage_error(y_true = y_true,
+                                          y_pred = y_pred)
+    
+    r2 = r2_score(y_true = y_true, y_pred = y_pred)
+
+    metrics = {'MAE': mae, 'RMSE': rmse, 'MAPE': mape, 'R2': r2}
+    
+    print('MAE', mae)
+    print('RMSE', rmse)
+    print('MAPE', mape)
+    print('R2', r2)
+    
+    return metrics
+
 
