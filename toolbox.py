@@ -158,3 +158,11 @@ def calc_metrics(y_true, y_pred):
     return metrics
 
 
+def calc_residuals(y_test, y_pred):
+    resid = pd.DataFrame()
+    resid['observed'] = y_test.copy()
+    resid['predicted'] = y_pred.copy()
+    resid['residuals'] = resid['predicted'] - resid['observed']
+    return resid
+
+
