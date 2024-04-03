@@ -50,10 +50,12 @@ def load_weather_data(file):
     # calculate cumulative weather data for moving windows
     w['precip_mean_prev_7d_sum'] = w['precip_mean'].rolling(window=7).sum()
     w['precip_mean_prev_30d_sum'] = w['precip_mean'].rolling(window=30).sum()
-    w['precip_mean_prev_90d_sum'] = w['precip_mean'].rolling(window=90).sum()    
+    w['precip_mean_prev_90d_sum'] = w['precip_mean'].rolling(window=90).sum()
+    w['precip_mean_prev_1y_sum'] = w['precip_mean'].rolling(window=365).sum()    
     w['tmean_mean_prev_7d_mean'] = w['tmean_mean'].rolling(window=7).mean()
     w['tmean_mean_prev_30d_mean'] = w['tmean_mean'].rolling(window=30).mean()
     w['tmean_mean_prev_90d_mean'] = w['tmean_mean'].rolling(window=90).mean()
+    w['tmean_mean_prev_1y_mean'] = w['tmean_mean'].rolling(window=365).mean()
 
     return w
 
@@ -164,5 +166,36 @@ def calc_residuals(y_test, y_pred):
     resid['predicted'] = y_pred.copy()
     resid['residuals'] = resid['predicted'] - resid['observed']
     return resid
+
+
+def perform_pca(df, n_components=None):
+    # Normalize data
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(df)
+    
+    # Perform PCA
+    if n_components is None:
+        n_components = min(df.shape[1], df.shape[0])
+    pca = PCA(n_components=n_components).set_output(transform='pandas')
+    X_pca = pca.fit_transform(data_scaled)
+    
+    # Gather PCA statistics
+    explained_variance_ratio = pca.explained_variance_ratio_
+    components = pca.components_
+    
+    # Create a DataFrame for explained variance ratio
+    df_expl_vari_ratio = pd.DataFrame(explained_variance_ratio,
+                                      columns=['Explained Variance Ratio'],
+                                      index=[f'PC-{i+1}' for i in range(n_components)])
+    
+    # Create a DataFrame for components
+    df_components = pd.DataFrame(components, 
+                                 columns=df.columns, 
+                                 index=[f'PC-{i+1}' for i in range(n_components)])
+    
+    # Concatenate DataFrames
+    df_pca_stats = pd.concat([df_expl_vari_ratio, df_components], axis=1)
+    
+    return pca, X_pca, df_pca_stats.T
 
 
