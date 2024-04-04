@@ -4,16 +4,21 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 import rasterio
-from rasterio.plot import show
-import cartopy.crs as ccrs # probably needs to be installed with pip...
-import pyproj
+#from rasterio.plot import show
+#import cartopy.crs as ccrs # probably needs to be installed with pip...
 from shapely.geometry import Point
 
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import r2_score
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import silhouette_score
+
+from sklearn.cluster import KMeans
+
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+from sklearn.decomposition import PCA
 
 
 def load_dem(file):
@@ -118,10 +123,10 @@ def calc_initial_station_data(stations, data, initial_n_years):
 
     initial_years_agg.columns = ["_".join(col).rstrip('_') for col in initial_years_agg.columns.values]
 
-    initial_years_agg = initial_years_agg.rename(columns={'water_depth_mean': f'ini_{initial_n_years}_years_water_depth_mean',
-                                                        'water_depth_std': f'ini_{initial_n_years}_years_water_depth_std',
-                                                        'water_depth_min': f'ini_{initial_n_years}_years_water_depth_min',
-                                                        'water_depth_max': f'ini_{initial_n_years}_years_water_depth_max'})
+    initial_years_agg = initial_years_agg.rename(columns={'water_depth_mean': 'ini_years_water_depth_mean',
+                                                        'water_depth_std': 'ini_years_water_depth_std',
+                                                        'water_depth_min': 'ini_years_water_depth_min',
+                                                        'water_depth_max': 'ini_years_water_depth_max'})
 
     stations_agg = gpd.GeoDataFrame(pd.merge(stations, initial_years_agg, on='station_id', how='left'),
                                     geometry='geometry')
@@ -131,7 +136,7 @@ def calc_initial_station_data(stations, data, initial_n_years):
 
 def merge_groundwater_data(data, stations):
     merged = pd.merge(data, stations, how='left')
-    merged['water_depth_anomaly'] = merged['water_depth'] - merged['ini_1_years_water_depth_mean']
+    merged['water_depth_anomaly'] = merged['water_depth'] - merged['ini_years_water_depth_mean']
     merged.index = merged['date']
 
     return merged
@@ -199,3 +204,65 @@ def perform_pca(df, n_components=None):
     return pca, X_pca, df_pca_stats.T
 
 
+def explore_clusters(df, scale=True):
+    # DATA SCALING
+    if scale == True:
+        # Initialise the transformer (optionally, set parameters)
+        min_max = MinMaxScaler().set_output(transform="pandas")
+        
+        # Use the transformer to transform the data
+        df = min_max.fit_transform(df)
+
+    wcss = []
+    clusters = []
+    silhouettes = []
+
+    # CLUSTERING
+    for k in range(2, 30):
+        kmeans = KMeans(n_clusters=k, init='k-means++',
+                        n_init=10, max_iter=300)
+        
+        kmeans.fit(df)
+        wcss.append(kmeans.inertia_)
+        silhouettes.append(silhouette_score(df, kmeans.labels_))
+        clusters.append(k)
+
+    slope = np.diff(wcss)
+    curve = np.diff(slope)
+    #elbow = np.argmax(curve) + 1
+    #print(clusters[elbow])
+
+    # PLOTTING
+    fig, axs = plt.subplots(2, 2, figsize=(10, 8))
+    
+    axs[0,0].plot(clusters, wcss)
+    axs[0,0].set_xlabel('# of clusters')
+    axs[0,0].set_ylabel('inertia')
+    
+    axs[0,1].plot(clusters, silhouettes)
+    axs[0,1].set_xlabel('# of clusters')
+    axs[0,1].set_ylabel('silhouette score')
+    
+    axs[1,0].plot(clusters[:-1], slope)
+    axs[1,0].set_xlabel('# of clusters')
+    axs[1,0].set_ylabel('inertia slope')
+    
+    axs[1,1].plot(clusters[:-2], curve)
+    axs[1,1].set_xlabel('# of clusters')
+    axs[1,1].set_ylabel('inertia curvature')
+
+
+def apply_clusters(df, n_clusters, scale=True):
+    # DATA SCALING
+    if scale == True:
+        # Initialise the transformer (optionally, set parameters)
+        min_max = MinMaxScaler().set_output(transform="pandas")
+        
+        # Use the transformer to transform the data
+        df = min_max.fit_transform(df)
+        
+     # CLUSTERING
+    kmeans = KMeans(n_clusters=n_clusters, #random_state=0,
+                    n_init='auto').fit(df)
+
+    return kmeans.labels_, kmeans.cluster_centers_
