@@ -53,14 +53,19 @@ def load_weather_data(file):
     w.set_index('date', inplace=True)
 
     # calculate cumulative weather data for moving windows
+    w['precip_mean_prev_2d_sum'] = w['precip_mean'].rolling(window=2).sum()
     w['precip_mean_prev_7d_sum'] = w['precip_mean'].rolling(window=7).sum()
     w['precip_mean_prev_30d_sum'] = w['precip_mean'].rolling(window=30).sum()
     w['precip_mean_prev_90d_sum'] = w['precip_mean'].rolling(window=90).sum()
-    w['precip_mean_prev_1y_sum'] = w['precip_mean'].rolling(window=365).sum()    
+    w['precip_mean_prev_1y_sum'] = w['precip_mean'].rolling(window=365).sum()
+    w['precip_mean_prev_3y_sum'] = w['precip_mean'].rolling(window=365*3).sum()
+    
+    w['tmean_mean_prev_2d_mean'] = w['tmean_mean'].rolling(window=2).mean()
     w['tmean_mean_prev_7d_mean'] = w['tmean_mean'].rolling(window=7).mean()
     w['tmean_mean_prev_30d_mean'] = w['tmean_mean'].rolling(window=30).mean()
     w['tmean_mean_prev_90d_mean'] = w['tmean_mean'].rolling(window=90).mean()
     w['tmean_mean_prev_1y_mean'] = w['tmean_mean'].rolling(window=365).mean()
+    w['tmean_mean_prev_3y_mean'] = w['tmean_mean'].rolling(window=365*3).mean()
 
     return w
 
