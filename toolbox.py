@@ -3,6 +3,7 @@ import numpy as np
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
+import random
 import rasterio
 #from rasterio.plot import show
 #import cartopy.crs as ccrs # probably needs to be installed with pip...
@@ -271,3 +272,45 @@ def apply_clusters(df, n_clusters, scale=True):
                     n_init='auto').fit(df)
 
     return kmeans.labels_, kmeans.cluster_centers_
+
+
+def plot_clusters(coordinates_df, labels, centers):
+    '''
+    coordinates_df of the form: df[['x', 'y']]
+    '''
+    # Plot the points
+    plt.scatter(coordinates_df['x'], coordinates_df['y'], c=labels)#, cmap='viridis')
+    
+    # Plot the cluster centers
+    plt.scatter(centers[:, 0], centers[:, 1], c='red', marker='x')
+    
+    # Show the plot
+    plt.show()
+    
+    
+def tt_split_by_stations(df):
+    ids = list(df.station_id.unique())
+
+    # Calculate 80% of the list's length
+    num_elements = round(len(ids) * 0.8)
+    
+    # Randomly select 80% of the elements
+    train_ids = random.sample(ids, k=num_elements)
+
+    # create train and test dfs
+    train = df.loc[df.station_id.isin(train_ids)]
+    test = df.loc[~df.station_id.isin(train_ids)]
+
+    # define X and y
+    y_train = train.pop('water_depth')
+    y_test = test.pop('water_depth')
+    
+    reserve_cols_as_info = ['station_id', 'date', 'geometry']
+    
+    info_train = train[reserve_cols_as_info].copy()
+    info_test = test[reserve_cols_as_info].copy()
+    
+    X_train = train.copy().drop(reserve_cols_as_info, axis=1)
+    X_test = test.copy().drop(reserve_cols_as_info, axis=1)
+
+    return train, test, X_train, X_test, y_train, y_test, info_train, info_test
