@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import geopandas as gpd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 import random
 import rasterio
@@ -314,3 +315,59 @@ def tt_split_by_stations(df):
     X_test = test.copy().drop(reserve_cols_as_info, axis=1)
 
     return train, test, X_train, X_test, y_train, y_test, info_train, info_test
+
+
+def plot_station_data(df, start_date=None, end_date=None):
+    # Create a figure and an axis
+    fig, ax = plt.subplots(4,1, figsize=(10, 10), sharex=True)
+    
+    sns.lineplot(x="date", y="water_depth",
+                 color='r', alpha=0.5,
+                 data=df, ax=ax[0])
+    
+    sns.lineplot(x="date", y="pred_water_depth",
+                 color='orange', alpha=0.5,
+                 data=df, ax=ax[0])
+    
+    sns.lineplot(x="date", y="residuals",
+                 color='k', alpha=0.5,
+                 data=df, ax=ax[1])
+    
+    ax[1].axhline(y=0, color='k', alpha=0.7)
+    # Create a secondary y-axis
+    #ax[1] = ax[0].twinx()
+    
+    sns.lineplot(x="date", y="tmean_mean_prev_1y_mean", 
+                 data=df, ax=ax[2], color='g')
+    
+    # Create a secondary y-axis
+    ax[2] = ax[2].twinx()
+    
+    sns.lineplot(x="date", y="precip_mean_prev_1y_sum", 
+                 data=df, ax=ax[2], color='b')
+    
+    # Optionally, set labels for the y-axes
+    #ax[3].set_ylabel('precip')
+    #ax2.set_ylabel('Y2 Label')
+    
+    # Plot the second DataFrame on the secondary y-axis
+    sns.lineplot(x="date", y="tmean_mean_prev_7d_mean", 
+                 data=df, ax=ax[3], color='g')
+    
+    # Create a secondary y-axis
+    ax[3] = ax[3].twinx()
+    
+    sns.lineplot(x="date", y="precip_mean_prev_7d_sum", 
+                 data=df, ax=ax[3], color='b')
+    
+    # Optionally, set labels for the y-axes
+    #ax[3].set_ylabel('precip')
+    #ax2.set_ylabel('Y2 Label')
+    
+    # Set the x-axis limits
+    if start_date and end_date:
+        plt.xlim(start_date, end_date)
+    
+    # Show the plot
+    plt.legend()
+    plt.show()
