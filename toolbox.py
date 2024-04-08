@@ -322,12 +322,14 @@ def plot_station_data(df, start_date=None, end_date=None):
     fig, ax = plt.subplots(4,1, figsize=(10, 10), sharex=True)
     
     sns.lineplot(x="date", y="water_depth",
-                 color='r', alpha=0.5,
-                 data=df, ax=ax[0])
+                 color='tab:orange', alpha=0.5,
+                 data=df, ax=ax[0], label='Measured water depth (m)')
     
     sns.lineplot(x="date", y="pred_water_depth",
-                 color='orange', alpha=0.5,
-                 data=df, ax=ax[0])
+                 color='tab:red', alpha=0.5,
+                 data=df, ax=ax[0], label='Predicted water depth (m)')
+    
+    ax[0].legend()
     
     sns.lineplot(x="date", y="residuals",
                  color='k', alpha=0.5,
@@ -338,13 +340,17 @@ def plot_station_data(df, start_date=None, end_date=None):
     #ax[1] = ax[0].twinx()
     
     sns.lineplot(x="date", y="tmean_mean_prev_1y_mean", 
-                 data=df, ax=ax[2], color='g')
+                 data=df, ax=ax[2], color='tab:green',
+                 label='Mean Temp. prev. year (°C)')
     
     # Create a secondary y-axis
     ax[2] = ax[2].twinx()
     
     sns.lineplot(x="date", y="precip_mean_prev_1y_sum", 
-                 data=df, ax=ax[2], color='b')
+                 data=df, ax=ax[2], color='tab:blue',
+                 label='Cumulative precip. prev. year (mm)')
+    
+    ax[2].legend()
     
     # Optionally, set labels for the y-axes
     #ax[3].set_ylabel('precip')
@@ -352,13 +358,17 @@ def plot_station_data(df, start_date=None, end_date=None):
     
     # Plot the second DataFrame on the secondary y-axis
     sns.lineplot(x="date", y="tmean_mean_prev_7d_mean", 
-                 data=df, ax=ax[3], color='g')
+                 data=df, ax=ax[3], color='tab:green',
+                 label='Mean temp. prev. year (°C)')
     
     # Create a secondary y-axis
     ax[3] = ax[3].twinx()
     
     sns.lineplot(x="date", y="precip_mean_prev_7d_sum", 
-                 data=df, ax=ax[3], color='b')
+                 data=df, ax=ax[3], color='tab:blue',
+                 label='Cumulative precip. prev. 7 days (mm)')
+    
+    ax[3].legend()
     
     # Optionally, set labels for the y-axes
     #ax[3].set_ylabel('precip')
@@ -369,5 +379,4 @@ def plot_station_data(df, start_date=None, end_date=None):
         plt.xlim(start_date, end_date)
     
     # Show the plot
-    plt.legend()
     plt.show()
