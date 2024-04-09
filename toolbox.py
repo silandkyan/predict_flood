@@ -323,11 +323,11 @@ def plot_station_data(df, start_date=None, end_date=None):
     
     sns.lineplot(x="date", y="water_depth",
                  color='tab:orange', alpha=0.5,
-                 data=df, ax=ax[0], label='Measured water depth (m)')
+                 data=df, ax=ax[0], label='Measured (m)')
     
     sns.lineplot(x="date", y="pred_water_depth",
                  color='tab:red', alpha=0.5,
-                 data=df, ax=ax[0], label='Predicted water depth (m)')
+                 data=df, ax=ax[0], label='Predicted (m)')
     
     ax[0].legend()
     
