@@ -55,7 +55,7 @@ def load_weather_data(file):
     w.set_index('date', inplace=True)
 
     # calculate cumulative weather data for moving windows
-    w = calc_cumulative_weather(w)
+    #w = calc_cumulative_weather(w)
 
     return w
 
