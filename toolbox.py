@@ -317,18 +317,20 @@ def tt_split_by_stations(df):
     return train, test, X_train, X_test, y_train, y_test, info_train, info_test
 
 
-def plot_station_data(df, start_date=None, end_date=None):
+def plot_station_data(df, start_date=None, end_date=None, save=False):
     # Create a figure and an axis
     fig, ax = plt.subplots(4,1, figsize=(10, 10), sharex=True)
     
     sns.lineplot(x="date", y="water_depth",
                  color='tab:orange', alpha=0.5,
-                 data=df, ax=ax[0], label='Measured (m)')
+                 data=df, ax=ax[0], label='Measured')
     
     sns.lineplot(x="date", y="pred_water_depth",
                  color='tab:red', alpha=0.5,
-                 data=df, ax=ax[0], label='Predicted (m)')
+                 data=df, ax=ax[0], label='Predicted')
     
+    ax[0].set_xlabel('Date')
+    ax[0].set_ylabel('Water depth (m)')
     ax[0].legend()
     
     sns.lineplot(x="date", y="residuals",
@@ -336,21 +338,27 @@ def plot_station_data(df, start_date=None, end_date=None):
                  data=df, ax=ax[1])
     
     ax[1].axhline(y=0, color='k', alpha=0.7)
+    ax[1].set_ylabel('Residuals (m)')
     # Create a secondary y-axis
     #ax[1] = ax[0].twinx()
     
     sns.lineplot(x="date", y="tmean_mean_prev_1y_mean", 
                  data=df, ax=ax[2], color='tab:green',
-                 label='Mean Temp. prev. year (°C)')
+                 #label='Mean Temp. prev. year (°C)'
+                 )
+    ax[2].set_ylabel('Mean Temp. prev. year (°C)', color='tab:green')
+    ax[2].tick_params(axis='y', colors='tab:green')
     
     # Create a secondary y-axis
-    ax[2] = ax[2].twinx()
+    ax2_twin = ax[2].twinx()
     
     sns.lineplot(x="date", y="precip_mean_prev_1y_sum", 
-                 data=df, ax=ax[2], color='tab:blue',
-                 label='Cumulative precip. prev. year (mm)')
-    
-    ax[2].legend()
+                 data=df, ax=ax2_twin, color='tab:blue',
+                 #label='Cumulative precip. prev. year (mm)'
+                 )
+    ax2_twin.set_ylabel('Cumul. precip. prev. year (mm)', color='tab:blue')
+    ax2_twin.tick_params(axis='y', colors='tab:blue')
+    #ax[2].legend(False)
     
     # Optionally, set labels for the y-axes
     #ax[3].set_ylabel('precip')
@@ -359,24 +367,30 @@ def plot_station_data(df, start_date=None, end_date=None):
     # Plot the second DataFrame on the secondary y-axis
     sns.lineplot(x="date", y="tmean_mean_prev_7d_mean", 
                  data=df, ax=ax[3], color='tab:green',
-                 label='Mean temp. prev. year (°C)')
+                 #label='Mean temp. prev. year (°C)'
+                 )
+    ax[3].set_ylabel('Mean Temp. prev. 7 days (°C)', color='tab:green')
+    ax[3].tick_params(axis='y', colors='tab:green')
     
     # Create a secondary y-axis
-    ax[3] = ax[3].twinx()
+    ax3_twin = ax[3].twinx()
     
     sns.lineplot(x="date", y="precip_mean_prev_7d_sum", 
-                 data=df, ax=ax[3], color='tab:blue',
-                 label='Cumulative precip. prev. 7 days (mm)')
+                 data=df, ax=ax3_twin, color='tab:blue',
+                 #label='Cumulative precip. prev. 7 days (mm)'
+                 )
+    ax3_twin.set_ylabel('Cumul. precip. prev. 7 days (mm)', color='tab:blue')
+    ax3_twin.tick_params(axis='y', colors='tab:blue')
     
-    ax[3].legend()
-    
-    # Optionally, set labels for the y-axes
-    #ax[3].set_ylabel('precip')
-    #ax2.set_ylabel('Y2 Label')
+    #ax[3].legend(False)
     
     # Set the x-axis limits
     if start_date and end_date:
         plt.xlim(start_date, end_date)
     
+    # Save the plot
+    if save == True:
+        plt.savefig('./figs/station_details.png', bbox_inches='tight')
+
     # Show the plot
     plt.show()
