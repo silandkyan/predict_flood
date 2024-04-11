@@ -394,3 +394,60 @@ def plot_station_data(df, start_date=None, end_date=None, save=False):
 
     # Show the plot
     plt.show()
+    
+    
+def create_year_df(year):
+    '''year must be type int'''
+    # Create a date range for the year with daily frequency
+    date_range = pd.date_range(start=str(year) + '-01-01',
+                               end=str(year) + '-12-31',
+                               freq='D')
+    
+    # Create a DataFrame with the date range as the index
+    df = pd.DataFrame(index=date_range)
+    df['date'] = df.index
+    # add column for merging
+    df['month_day'] = df.index.strftime('%m-%d')
+
+    return df
+
+
+def merge_weather_dates(weather_df, year_df):
+    synth = pd.merge(year_df, weather_df, 
+                left_on='month_day', right_on='month_day',
+                how='left',
+                #left_index=True
+                ).set_index(year_df['date'])
+
+    #synth.index.rename('date')
+    synth = synth.drop(['month_day', 'month', 'day'], axis=1)
+
+    return synth
+
+
+def create_weather(ref_year_df, start_year, running_year, 
+                   y2y_temp_change, y2y_precip_change,
+                  add_rand=True):
+    ref_df = ref_year_df.copy()
+    year_df = create_year_df(start_year + running_year)
+    s = merge_weather_dates(ref_df, year_df)
+
+    # calc long-term drift
+    drift_precip = y2y_precip_change*running_year*s['precip_mean'].sum()/365
+    drift_temp = y2y_temp_change*running_year
+
+    # create short-term randomness
+    if add_rand == True:
+        # only add 0.5 std randomness to precip to prevent overestimation
+        rand_precip = np.random.normal(loc=0, scale=s['precip_std']/2)
+        rand_temp = np.random.normal(loc=0, scale=s['tmean_std'])
+    else:
+        rand_precip, rand_temp = 0, 0
+    
+    s['tmean_mean'] = s['tmean_mean'] + drift_temp + rand_temp
+    
+    s['precip_mean'] = s['precip_mean'] + drift_precip + rand_precip
+    # prevent neg. precip. values
+    s.loc[s['precip_mean'] < 0, 'precip_mean'] = 0
+    
+    return s
