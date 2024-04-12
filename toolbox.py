@@ -408,21 +408,21 @@ def plot_predicted_data(df, start_date=None, end_date=None, save=False):
     ax[0].set_ylabel('Predicted water depth (m)')
     ax[0].legend()
     
-    sns.lineplot(x="date", y="tmean_mean_prev_1y_mean", 
+    sns.lineplot(x="date", y="tmean_mean_prev_90d_mean", 
                  data=df, ax=ax[1], color='tab:green',
                  #label='Mean Temp. prev. year (°C)'
                  )
-    ax[1].set_ylabel('Mean Temp. prev. year (°C)', color='tab:green')
+    ax[1].set_ylabel('Mean Temp. prev. 90 days (°C)', color='tab:green')
     ax[1].tick_params(axis='y', colors='tab:green')
     
     # Create a secondary y-axis
     ax1_twin = ax[1].twinx()
     
-    sns.lineplot(x="date", y="precip_mean_prev_1y_sum", 
+    sns.lineplot(x="date", y="precip_mean_prev_90d_sum", 
                  data=df, ax=ax1_twin, color='tab:blue',
                  #label='Cumulative precip. prev. year (mm)'
                  )
-    ax1_twin.set_ylabel('Cumul. precip. prev. year (mm)', color='tab:blue')
+    ax1_twin.set_ylabel('Cumul. precip. prev. 90 days (mm)', color='tab:blue')
     ax1_twin.tick_params(axis='y', colors='tab:blue')
     
     # Plot the second DataFrame on the secondary y-axis
