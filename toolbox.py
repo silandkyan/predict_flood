@@ -329,6 +329,7 @@ def plot_station_data(df, start_date=None, end_date=None, save=False):
                  color='tab:red', alpha=0.5,
                  data=df, ax=ax[0], label='Predicted')
     
+    ax[0].invert_yaxis()
     ax[0].set_xlabel('Date')
     ax[0].set_ylabel('Water depth (m)')
     ax[0].legend()
@@ -336,7 +337,7 @@ def plot_station_data(df, start_date=None, end_date=None, save=False):
     sns.lineplot(x="date", y="residuals",
                  color='k', alpha=0.5,
                  data=df, ax=ax[1])
-    
+    ax[1].invert_yaxis()
     ax[1].axhline(y=0, color='k', alpha=0.7)
     ax[1].set_ylabel('Residuals (m)')
     # Create a secondary y-axis
@@ -404,6 +405,7 @@ def plot_predicted_data(df, start_date=None, end_date=None, save=False):
                  color='tab:red', alpha=0.5,
                  data=df, ax=ax[0], label='Predicted')
     
+    ax[0].invert_yaxis()
     ax[0].set_xlabel('Date')
     ax[0].set_ylabel('Predicted water depth (m)')
     ax[0].legend()
