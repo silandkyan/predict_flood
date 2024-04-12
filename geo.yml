@@ -187,6 +187,8 @@ dependencies:
   - zstd=1.5.5=hc292b87_0
   - pip:
       - cartopy==0.22.0
+      - feather-format==0.4.1
+      - pyarrow==15.0.2
       - pyproj==3.6.1
       - pyshp==2.3.1
 prefix: /home/philip/anaconda3/envs/geo
