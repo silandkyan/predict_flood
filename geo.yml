@@ -65,6 +65,8 @@ dependencies:
   - joblib=1.2.0=py39h06a4308_0
   - jpeg=9e=h5eee18b_1
   - json-c=0.16=h5eee18b_0
+  - jsonschema=4.19.2=py39h06a4308_0
+  - jsonschema-specifications=2023.7.1=py39h06a4308_0
   - jupyter_client=8.6.0=py39h06a4308_0
   - jupyter_core=5.5.0=py39h06a4308_0
   - kealib=1.4.14=hb50703a_1
@@ -116,6 +118,7 @@ dependencies:
   - mkl_random=1.2.4=py39hdb19cb5_0
   - munch=2.5.0=pyhd3eb1b0_0
   - munkres=1.1.4=py_0
+  - nbformat=5.9.2=py39h06a4308_0
   - ncurses=6.4=h6a678d5_0
   - nest-asyncio=1.6.0=py39h06a4308_0
   - networkx=3.1=py39h06a4308_0
@@ -136,6 +139,7 @@ dependencies:
   - pip=23.3.1=py39h06a4308_0
   - pixman=0.40.0=h7f8727e_1
   - platformdirs=3.10.0=py39h06a4308_0
+  - plotly=5.19.0=py39h2f386ee_0
   - poppler=0.81.0=h01f5e8b_2
   - poppler-data=0.4.11=h06a4308_1
   - proj=6.2.1=h05a3930_0
@@ -148,12 +152,15 @@ dependencies:
   - pysocks=1.7.1=py39h06a4308_0
   - python=3.9.18=h7a1cb2a_0
   - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - python-fastjsonschema=2.16.2=py39h06a4308_0
   - python-tzdata=2023.3=pyhd3eb1b0_0
   - pytz=2023.3.post1=py39h06a4308_0
   - pyzmq=25.1.2=py39h6a678d5_0
   - rasterio=1.2.10=py39h9a6c7ee_0
   - readline=8.2=h5eee18b_0
+  - referencing=0.30.2=py39h06a4308_0
   - requests=2.31.0=py39h06a4308_1
+  - rpds-py=0.10.6=py39hb02cf49_0
   - rtree=1.0.1=py39h06a4308_0
   - scikit-learn=1.3.0=py39h1128e8f_1
   - scipy=1.11.4=py39h5f9d8c6_0
@@ -166,6 +173,7 @@ dependencies:
   - sqlite=3.41.2=h5eee18b_0
   - stack_data=0.2.0=pyhd3eb1b0_0
   - tbb=2021.8.0=hdb19cb5_0
+  - tenacity=8.2.2=py39h06a4308_0
   - threadpoolctl=2.2.0=pyh0d69192_0
   - tiledb=2.3.3=h1132f93_2
   - tk=8.6.12=h1ccaba5_0
